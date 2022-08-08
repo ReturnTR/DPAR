@@ -9,6 +9,7 @@
 ```
 DPAR
 │   readme.md    
+│   per_data3.json              # 百度百科数据源，保证至少有3个预定义人物属性，预定义属性见论文
 │   no_para_all.json            # 含有部分人物介绍
 |   has_para_all.json           # 含有全部人物介绍
 └───expirement_data             # 用于实验的小部分数据
