@@ -1,4 +1,13 @@
 # coding:utf-8
+
+"""
+此文件包含：
+属性标准化
+属性过滤方法
+属性归一化方法
+构造数据过程
+"""
+
 from tools import *
 import re
 import os
@@ -1436,6 +1445,7 @@ def evaluate_two_infobox(json_file,des_file):
     return attribute_count
 
 def make_remote_data_para():
+    #造全部人物介绍数据
     total_person="output/extract_info/person_data3.json"
     remote_supervision_result="output/attribute_19_result_para.json"
     remote_supervision_result_process="output/remote_supervision_result_process_para.json"
@@ -1443,6 +1453,7 @@ def make_remote_data_para():
     process_remote_data(remote_supervision_result,remote_supervision_result_process)
 
 def make_remote_data():
+    #造只包含不是人物介绍的数据
     total_person="output/extract_info/person_data3.json"
     remote_supervision_result="output/attribute_17_result.json"
     remote_supervision_result_process="output/remote_supervision_result_process.json"
@@ -1451,7 +1462,6 @@ def make_remote_data():
     lstm_BIO_file="output/BIO_output/bio"
     remote_supervision(total_person,remote_supervision_result)
     process_remote_data(remote_supervision_result,remote_supervision_result_process)
-    
     cut_json_data(remote_supervision_result_process,remote_supervision_result_process_cut,1000,41000)
     json2mrc(remote_supervision_result_process_cut,mrc_BIO_file)
     json2BIO(remote_supervision_result_process_cut,lstm_BIO_file)
@@ -1459,11 +1469,10 @@ def make_remote_data():
 
 
 # make_remote_data()
-#make_remote_data_para()
-evaluate_two_infobox("output/model_output/dev_output_para_crf.json","output/model_output/dev_output_para_crf_result.json")
+# make_remote_data_para()
+# evaluate_two_infobox("output/model_output/dev_output_para_crf.json","output/model_output/dev_output_para_crf_result.json")
 # save_json(output,"output/evaluate_two_infobox_result.json")
-#data2excel(output,"output/dev_output_para.xlsx",mode="dict2")
-
+# data2excel(output,"output/dev_output_para.xlsx",mode="dict2")
 # get_remote_json_info("output/remote_supervision_result_process.json")
 # get_remote_json_info("output/remote_supervision_result_process_para.json")
 
