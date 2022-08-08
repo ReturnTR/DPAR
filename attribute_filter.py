@@ -1444,9 +1444,11 @@ def evaluate_two_infobox(json_file,des_file):
     save_json(result_data,des_file)
     return attribute_count
 
+# 以下为数据构造函数，其中数据源为person_data3.json，如果想要复现的话将里面的"output/extract_info/person_data3.json"和其他过程文件改成你自己的person_data3.json目录即可
+
 def make_remote_data_para():
     #造全部人物介绍数据
-    total_person="output/extract_info/person_data3.json"
+    total_person="output/extract_info/person_data3.json" 
     remote_supervision_result="output/attribute_19_result_para.json"
     remote_supervision_result_process="output/remote_supervision_result_process_para.json"
    # remote_supervision_para(total_person,remote_supervision_result)
