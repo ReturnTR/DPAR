@@ -1,5 +1,10 @@
 ## 基于阅读理解的文档级人物属性抽取数据
 
+由于数据超过1G，因此将其存放在百度网盘中，链接如下
+
+链接：https://pan.baidu.com/s/1Lyxm6wTc0qP9WZXppvJJMw 
+
+提取码：xowc
 ### 目录结构及文件说明
 ```
 DPAR
